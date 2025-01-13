@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="google-site-verification" content="fX39rjcvVkC9Kk6CEPQzBk86a9E3AgF1Ty7Nms5lw1E" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PHQWGTSKDS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PHQWGTSKDS');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NB Player</title>
@@ -13,6 +23,7 @@
       background: linear-gradient(to right, #ff7e5f, #feb47b);
       color: #fff;
     }
+
     header {
       background-color: #4a90e2;
       color: white;
@@ -21,42 +32,48 @@
       align-items: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
     .logo {
       width: 50px;
       height: 50px;
       margin-right: 1rem;
     }
+
     .header-title {
       font-size: 1.8rem;
       font-weight: bold;
       letter-spacing: 1px;
     }
+
     .owner-info {
       display: flex;
       align-items: center;
       justify-content: flex-start;
       background: linear-gradient(to right, #4a90e2, #50c9c3);
       padding: 0.5rem 1rem;
-      height: auto;
       color: white;
       font-size: 1rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
     .owner-info img {
       width: 30px;
       height: auto;
       margin-right: 0.5rem;
     }
+
     .owner-info p {
       margin: 0;
       font-size: 1rem;
       font-weight: bold;
       color: #fff;
     }
+
     .search-container {
       text-align: center;
       margin: 1rem 0;
     }
+
     .search-container input {
       width: 60%;
       padding: 0.5rem;
@@ -64,6 +81,7 @@
       border: 1px solid #ddd;
       border-radius: 5px;
     }
+
     .suggestions {
       width: 60%;
       margin: 0 auto;
@@ -76,14 +94,17 @@
       border-radius: 5px;
       overflow: hidden;
     }
+
     .suggestions li {
       padding: 0.5rem;
       cursor: pointer;
       border-bottom: 1px solid #ddd;
     }
+
     .suggestions li:hover {
       background: #f4f4f4;
     }
+
     .movie-container {
       display: flex;
       flex-wrap: wrap;
@@ -91,6 +112,7 @@
       gap: 1.5rem;
       padding: 2rem;
     }
+
     .movie {
       background: rgba(255, 255, 255, 0.8);
       border-radius: 10px;
@@ -101,15 +123,18 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s;
     }
+
     .movie:hover {
       transform: scale(1.05);
     }
+
     .movie img {
       width: 100%;
       height: 150px;
       object-fit: cover;
       border-bottom: 3px solid #feb47b;
     }
+
     .movie h3 {
       font-size: 1.2rem;
       margin: 0;
@@ -117,6 +142,7 @@
       color: #333;
       text-align: center;
     }
+
     .movie-overlay {
       position: absolute;
       top: 0;
@@ -130,80 +156,48 @@
       opacity: 0;
       transition: opacity 0.3s;
     }
+
     .movie:hover .movie-overlay {
       opacity: 1;
     }
+
     .movie-overlay iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
-    .ad-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      z-index: 10000;
-      flex-direction: column;
-    }
-    .ad-container.show {
-      display: flex;
-    }
-    .countdown {
-      font-size: 2.5rem;
-    }
-    .skip-btn {
-      background-color: #f44336;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 1rem;
-      display: none;
-    }
   </style>
 </head>
 <body>
+
   <header>
     <img class="logo" src="https://i.ibb.co/Df3b3pL/56797a71-4e8b-4c60-b21c-ade7b6d4afc4.webp" alt="Logo">
     <span class="header-title">NB Player</span>
   </header>
+
   <div class="search-container">
     <input type="text" id="search-bar" placeholder="Search for a movie...">
     <ul class="suggestions" id="suggestions"></ul>
   </div>
+
   <div class="movie-container" id="movie-container">
     <!-- Movie 1 -->
-    <div class="movie" data-title="srinivas kalyanam">
+    <div class="movie" data-title="srinivas kalyanam" data-video-url="https://www.youtube.com/embed/VeoiEqdkKAk">
       <img src="https://img.youtube.com/vi/VeoiEqdkKAk/maxresdefault.jpg" alt="Movie Thumbnail">
       <div class="movie-overlay">
         <iframe src="https://www.youtube.com/embed/VeoiEqdkKAk" allowfullscreen></iframe>
       </div>
       <h3>Srinivas Kalyanam</h3>
     </div>
+
     <!-- Movie 2 -->
-    <div class="movie" data-title="mr. majnu">
+    <div class="movie" data-title="mr. majnu" data-video-url="https://www.youtube.com/embed/-vGSa3rrF_0">
       <img src="https://img.youtube.com/vi/-vGSa3rrF_0/maxresdefault.jpg" alt="Movie Thumbnail">
       <div class="movie-overlay">
         <iframe src="https://www.youtube.com/embed/-vGSa3rrF_0" allowfullscreen></iframe>
       </div>
       <h3>Mr. Majnu</h3>
     </div>
-  </div>
-
-  <!-- Ad Container -->
-  <div class="ad-container" id="ad-container">
-    <div class="countdown" id="countdown">5</div>
-    <button class="skip-btn" id="skip-btn" onclick="skipAd()">Skip Ad</button>
-    <script async="async" data-cfasync="false" src="//pl25538302.profitablecpmrate.com/01e8e808edd31ae39002c780ccf2a25b/invoke.js"></script>
-    <div id="container-01e8e808edd31ae39002c780ccf2a25b"></div>
   </div>
 
   <div class="owner-info">
@@ -215,12 +209,8 @@
     const searchBar = document.getElementById('search-bar');
     const suggestions = document.getElementById('suggestions');
     const movies = document.querySelectorAll('.movie');
-    const adContainer = document.getElementById('ad-container');
-    const countdown = document.getElementById('countdown');
-    const skipBtn = document.getElementById('skip-btn');
-    let adInterval;
-    let videoPlayers = document.querySelectorAll('iframe');
-    
+    let clickCounter = 0;
+
     searchBar.addEventListener('input', (e) => {
       const query = e.target.value.toLowerCase();
       suggestions.innerHTML = '';
@@ -253,37 +243,37 @@
       });
     }
 
-    function showAd() {
-      adContainer.classList.add('show');
-      let timeLeft = 5;
-      const adIntervalId = setInterval(() => {
-        timeLeft--;
-        countdown.textContent = timeLeft;
-        if (timeLeft <= 0) {
-          clearInterval(adIntervalId);
-          skipBtn.style.display = 'block'; // Show the skip button when countdown ends
+    // Function to handle video click and ad opening
+    const movieElements = document.querySelectorAll('.movie');
+    movieElements.forEach(movie => {
+      movie.addEventListener('click', (e) => {
+        // Check if it's an odd click
+        clickCounter++;
+        if (clickCounter % 2 !== 0) {
+          const adScript = document.createElement('script');
+          adScript.type = 'text/javascript';
+          adScript.src = '//pl25555320.profitablecpmrate.com/0a/99/43/0a994362d695ced11059f6fae7214b2c.js';
+          document.body.appendChild(adScript);
         }
-      }, 1000);
-    }
 
-    function skipAd() {
-      adContainer.classList.remove('show');
-    }
-
-    window.addEventListener('load', () => {
-      showAd();
-      adInterval = setInterval(showAd, 60000); // Show ad every 60 seconds
-    });
-
-    videoPlayers.forEach(player => {
-      player.addEventListener('play', () => {
-        videoPlayers.forEach(otherPlayer => {
-          if (otherPlayer !== player) {
-            otherPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-          }
-        });
+        // Play the movie in the current tab
+        const videoUrl = movie.dataset.videoUrl;
+        const iframe = movie.querySelector('iframe');
+        iframe.src = videoUrl;
       });
     });
+
+    // Handle clicks anywhere on the page
+    document.addEventListener('click', () => {
+      clickCounter++;
+      if (clickCounter % 2 !== 0) {
+        const adScript = document.createElement('script');
+        adScript.type = 'text/javascript';
+        adScript.src = '//pl25555320.profitablecpmrate.com/0a/99/43/0a994362d695ced11059f6fae7214b2c.js';
+        document.body.appendChild(adScript);
+      }
+    });
   </script>
+
 </body>
 </html>
